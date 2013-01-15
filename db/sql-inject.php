@@ -1,4 +1,11 @@
 <?php
+    /*
+        SQL Injection: unsanitized inputs
+        Type any username and "blah' OR '1=1" as the password to bypass
+        Solutions: mysql_real_escape_string() function (uncomment lines below)
+        or use the mysqli objects.
+    */
+ 
     $db = mysql_connect("sql.mit.edu", "cliu2014", "charlesliu");
     mysql_select_db("cliu2014+6470security") or die(mysql_error());
     $user = $_POST["user"];

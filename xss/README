@@ -1,0 +1,5 @@
+Cross-site script demo
+Serve xss-js.js on a different server and get it accordingly in the second url
+
+http://cliu2014.scripts.mit.edu/security/xss/xss-demo.php?a=<script>void('&b=');alert(1);</script>
+http://cliu2014.scripts.mit.edu/security/xss/xss-demo.php?a=<script src='xss-js.js'>void('&b=');</script>
